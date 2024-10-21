@@ -1,0 +1,169 @@
+[
+  {
+    "recipe_id": 1,
+    "recipe_image": "https://i.ibb.co.com/zRTVTV8/spaghetti-bolognese.jpg",
+    "recipe_name": "Spaghetti Bolognese",
+    "short_description": "A classic Italian pasta dish with rich meat sauce.",
+    "ingredients": [
+      "200 g spaghetti",
+      "300 g ground beef",
+      "400 ml tomato sauce",
+      "1 onion, chopped",
+      "2 cloves garlic, minced",
+      "2 tbsp olive oil",
+      "Salt to taste",
+      "Pepper to taste"
+    ],
+    "preparing_time": 30,
+    "calories": 600
+  },
+  {
+    "recipe_id": 2,
+    "recipe_image": "https://i.ibb.co.com/VghQ2LY/chicken-curry.jpg",
+    "recipe_name": "Chicken Curry",
+    "short_description": "A flavorful and spicy chicken dish cooked in a rich curry sauce.",
+    "ingredients": [
+      "500 g chicken, cubed",
+      "2 tbsp curry powder",
+      "400 ml coconut milk",
+      "1 onion, chopped",
+      "2 cloves garlic, minced",
+      "1 inch ginger, grated",
+      "2 tbsp olive oil",
+      "Salt to taste"
+    ],
+    "preparing_time": 40,
+    "calories": 700
+  },
+  {
+    "recipe_id": 3,
+    "recipe_image": "https://i.ibb.co.com/528YdHj/Caesar-Salad.jpg",
+    "recipe_name": "Caesar Salad",
+    "short_description": "A fresh salad with romaine lettuce, croutons, and Caesar dressing.",
+    "ingredients": [
+      "1 head romaine lettuce, chopped",
+      "1 cup croutons",
+      "50 g parmesan cheese, grated",
+      "100 ml Caesar dressing",
+      "1 lemon, juiced",
+      "Pepper to taste"
+    ],
+    "preparing_time": 15,
+    "calories": 300
+  },
+  {
+    "recipe_id": 4,
+    "recipe_image": "https://i.ibb.co.com/c28jnQn/Fluffy-Pancakes.jpg",
+    "recipe_name": "Fluffy Pancakes",
+    "short_description": "Light and fluffy pancakes perfect for breakfast.",
+    "ingredients": [
+      "200 g flour",
+      "250 ml milk",
+      "1 egg",
+      "2 tsp baking powder",
+      "2 tbsp sugar",
+      "50 g butter, melted",
+      "A pinch of salt"
+    ],
+    "preparing_time": 20,
+    "calories": 350
+  },
+  {
+    "recipe_id": 5,
+    "recipe_image": "https://i.ibb.co.com/c3xLmYs/Vegetable-Stir-Fry.jpg",
+    "recipe_name": "Vegetable Stir Fry",
+    "short_description": "A quick and healthy stir fry with mixed vegetables.",
+    "ingredients": [
+      "500 g mixed vegetables",
+      "3 tbsp soy sauce",
+      "2 cloves garlic, minced",
+      "1 inch ginger, grated",
+      "2 tbsp olive oil",
+      "1 tbsp sesame seeds"
+    ],
+    "preparing_time": 15,
+    "calories": 250
+  },
+  {
+    "recipe_id": 6,
+    "recipe_image": "https://i.ibb.co.com/2qtdVwN/Chocolate-Cake.jpg",
+    "recipe_name": "Chocolate Cake",
+    "short_description": "A rich and moist chocolate cake.",
+    "ingredients": [
+      "200 g flour",
+      "50 g cocoa powder",
+      "200 g sugar",
+      "3 eggs",
+      "100 g butter",
+      "150 ml milk",
+      "1 tsp baking powder",
+      "1 tsp vanilla extract"
+    ],
+    "preparing_time": 60,
+    "calories": 400
+  },
+  {
+    "recipe_id": 7,
+    "recipe_image": "https://i.ibb.co.com/8PyxSFs/Greek-Salad.jpg",
+    "recipe_name": "Greek Salad",
+    "short_description": "A refreshing salad with tomatoes, cucumbers, and feta cheese.",
+    "ingredients": [
+      "2 tomatoes, chopped",
+      "1 cucumber, diced",
+      "100 g feta cheese, crumbled",
+      "2 tbsp olive oil",
+      "1 tbsp lemon juice",
+      "1 tsp oregano",
+      "Salt to taste"
+    ],
+    "preparing_time": 10,
+    "calories": 200
+  },
+  {
+    "recipe_id": 8,
+    "recipe_image": "https://i.ibb.co.com/hHhZfSz/Beef-Tacos.jpg",
+    "recipe_name": "Beef Tacos",
+    "short_description": "Delicious tacos filled with seasoned ground beef.",
+    "ingredients": [
+      "300 g ground beef",
+      "8 taco shells",
+      "1 cup lettuce, shredded",
+      "1 tomato, diced",
+      "100 g cheddar cheese, grated",
+      "Taco sauce to taste"
+    ],
+    "preparing_time": 30,
+    "calories": 500
+  },
+  {
+    "recipe_id": 9,
+    "recipe_image": "https://i.ibb.co.com/gt85QNj/Berry-Smoothie.jpg",
+    "recipe_name": "Berry Smoothie",
+    "short_description": "A refreshing smoothie made with mixed berries.",
+    "ingredients": [
+      "200 g mixed berries",
+      "1 banana",
+      "150 g yogurt",
+      "1 tbsp honey",
+      "100 ml milk"
+    ],
+    "preparing_time": 10,
+    "calories": 250
+  },
+  {
+    "recipe_id": 10,
+    "recipe_image": "https://i.ibb.co.com/4ZNX7q6/Vegetable-Lasagna.jpg",
+    "recipe_name": "Vegetable Lasagna",
+    "short_description": "Layers of pasta, vegetables, and cheese baked to perfection.",
+    "ingredients": [
+      "12 sheets lasagna noodles",
+      "250 g ricotta cheese",
+      "200 g spinach",
+      "200 g mozzarella cheese, shredded",
+      "500 ml marinara sauce",
+      "50 g parmesan cheese, grated"
+    ],
+    "preparing_time": 60,
+    "calories": 600
+  }
+]
