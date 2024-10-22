@@ -1,15 +1,48 @@
 import { useEffect, useState } from "react";
 import CookingTable from "../CookingTable/CookingTable";
 import RecipeCards from "../RecipeCards/RecipeCards";
+import { toggle } from "../../utils/utils.js";
 
 const OurRecipes = () => {
   const [recipeCards, setRecipeCards] = useState([]);
+  const [addWantToCook, setAddWantToCook] = useState([]);
+  const [showDuplicateWarning, setShowDuplicateWarning] = useState(false);
+  const [addCurrentlyCooking, setAddCurrentlyCooking] = useState([]);
 
   useEffect(() => {
     fetch("recipes.json")
       .then((response) => response.json())
       .then((data) => setRecipeCards(data));
   }, []);
+
+  // Info: Adds the recipe card that we clicked on the want to cook table
+  const handleWantToCookBtn = (recipeCard) => {
+    const isAlreadyAdded = addWantToCook.some(
+      (cookItem) => cookItem.recipe_id === recipeCard.recipe_id
+    );
+
+    // Note: adds the clicked item on want to cook and if we click it again, it will show a warning
+    if (!isAlreadyAdded) {
+      const newAddWantToCook = [...addWantToCook, recipeCard];
+      setAddWantToCook(newAddWantToCook);
+    } else {
+      toggle(showDuplicateWarning, setShowDuplicateWarning);
+    }
+
+    // Note: hides the warning automatically after 2.5 seconds
+    setTimeout(() => {
+      setShowDuplicateWarning(false);
+    }, 2500);
+  };
+
+  // Info: adds the clicked item to currently cooking and removes it from want to cook
+  const handlePreparingBtn = (wantToCook) => {
+    const newAddWantToCook = addWantToCook.filter(
+      (cookItem) => cookItem.recipe_id !== wantToCook.recipe_id
+    );
+    setAddWantToCook(newAddWantToCook);
+  };
+
   return (
     <div className="mb-24">
       <div className=" md:mb-12 mb-8 text-center">
@@ -24,9 +57,26 @@ const OurRecipes = () => {
       </div>
 
       <div className="md:flex-row md:gap-6 flex flex-col gap-8">
-        <RecipeCards recipeCards={recipeCards}></RecipeCards>
+        <RecipeCards
+          recipeCards={recipeCards}
+          handleWantToCookBtn={handleWantToCookBtn}
+        ></RecipeCards>
 
-        <CookingTable></CookingTable>
+        <CookingTable
+          addWantToCook={addWantToCook}
+          handlePreparingBtn={handlePreparingBtn}
+        ></CookingTable>
+      </div>
+
+      {/* Toast */}
+      <div
+        className={`toast toast-end ${
+          showDuplicateWarning ? "block" : "hidden"
+        }`}
+      >
+        <div className="alert alert-warning">
+          <span>Recipe already added!</span>
+        </div>
       </div>
     </div>
   );

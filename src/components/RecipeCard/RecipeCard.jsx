@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { IoTimeOutline } from "react-icons/io5";
 import { AiOutlineFire } from "react-icons/ai";
 
-const RecipeCard = ({ recipeCard }) => {
+const RecipeCard = ({ recipeCard, handleWantToCookBtn }) => {
   const {
     recipe_image,
     recipe_name,
@@ -58,7 +58,10 @@ const RecipeCard = ({ recipeCard }) => {
         </p>
       </div>
 
-      <button className="text-lg font-medium text-[#150b2b] bg-[#0be58a] px-6 py-3 rounded-full">
+      <button
+        className="text-lg font-medium text-[#150b2b] bg-[#0be58a] px-6 py-3 rounded-full"
+        onClick={() => handleWantToCookBtn(recipeCard)}
+      >
         Want to Cook
       </button>
     </div>
@@ -67,5 +70,6 @@ const RecipeCard = ({ recipeCard }) => {
 
 RecipeCard.propTypes = {
   recipeCard: PropTypes.object,
+  handleWantToCookBtn: PropTypes.func,
 };
 export default RecipeCard;

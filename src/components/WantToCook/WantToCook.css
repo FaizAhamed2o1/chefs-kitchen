@@ -1,0 +1,19 @@
+th,
+td {
+  padding: 16px;
+}
+
+th {
+  padding-top: 0;
+}
+
+@media (width < 640px) {
+  th,
+  td {
+    padding: 8px;
+  }
+
+  th {
+    padding-top: 0;
+  }
+}
