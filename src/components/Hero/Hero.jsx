@@ -1,9 +1,4 @@
 const Hero = () => {
-  {
-    const arr = [2, 3, 4, 5, 6, 7];
-    arr[10] = 100;
-    console.log(arr);
-  }
   return (
     <div className="md:mb-24 mb-16">
       <div
