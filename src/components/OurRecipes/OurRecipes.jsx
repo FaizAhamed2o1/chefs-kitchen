@@ -8,6 +8,8 @@ const OurRecipes = () => {
   const [addWantToCook, setAddWantToCook] = useState([]);
   const [showDuplicateWarning, setShowDuplicateWarning] = useState(false);
   const [addCurrentlyCooking, setAddCurrentlyCooking] = useState([]);
+  const [totalCookingTime, setTotalCookingTime] = useState(0);
+  const [totalCalories, setTotalCalories] = useState(0);
 
   useEffect(() => {
     fetch("recipes.json")
@@ -41,6 +43,15 @@ const OurRecipes = () => {
       (cookItem) => cookItem.recipe_id !== wantToCook.recipe_id
     );
     setAddWantToCook(newAddWantToCook);
+
+    const filteredItem = addWantToCook.find(
+      (cookItem) => cookItem.recipe_id === wantToCook.recipe_id
+    );
+    const newAddCurrentlyCooking = [...addCurrentlyCooking, filteredItem];
+    setAddCurrentlyCooking(newAddCurrentlyCooking);
+
+    setTotalCookingTime(totalCookingTime + wantToCook.preparing_time);
+    setTotalCalories(totalCalories + wantToCook.calories);
   };
 
   return (
@@ -65,6 +76,9 @@ const OurRecipes = () => {
         <CookingTable
           addWantToCook={addWantToCook}
           handlePreparingBtn={handlePreparingBtn}
+          addCurrentlyCooking={addCurrentlyCooking}
+          totalCookingTime={totalCookingTime}
+          totalCalories={totalCalories}
         ></CookingTable>
       </div>
 

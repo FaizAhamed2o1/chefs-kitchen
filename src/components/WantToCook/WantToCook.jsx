@@ -26,8 +26,8 @@ const WantToCook = ({ addWantToCook, handlePreparingBtn }) => {
               <tr key={wantToCook.recipe_id}>
                 <th>{index + 1 || " "}</th>
                 <td>{wantToCook.recipe_name}</td>
-                <td>{wantToCook.preparing_time}</td>
-                <td>{wantToCook.calories}</td>
+                <td>{wantToCook.preparing_time} minutes</td>
+                <td>{wantToCook.calories} calories</td>
                 <td>
                   <button
                     className="font-medium px-[1.125rem] py-2 bg-[#0be58a] rounded-full"
